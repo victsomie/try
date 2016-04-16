@@ -1,6 +1,16 @@
+/*======Typology========*/
+
+h1, h2, h3{
+    font-family: "Lato",  sans-serif;
+    font-weight: 100;
+
+}
+
+
 .startup-hero{
     margin-bottom:4em;
-    color:#000;
+    color: orangered;
+    background-image: url();
     padding:11em 2em 11em 2em
 }
 @media only screen and (max-width: 760px){

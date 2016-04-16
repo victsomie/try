@@ -16,11 +16,12 @@
 
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/animate.css">
 </head>
 
 <body>
     <!--=======This can be a landing title!-->
-    <div class="startup-hero">
+    <div class="startup-hero wow bounceInUp pulse" data-wow-duration="3s" data-wow-offset="100">
         <div class="row">
             <div class="large-12 columns text-center">
                 <h1>Site based on Foundation</h1>
@@ -30,21 +31,20 @@
         </div>
     </div>
 
-
-    <div class="">
-        <div class="column small-10 small-centered">
+    <div class="wow bounceInLe" data-wow-duration="3s" data-wow-offset="100">
+        <div class="column small-12 large-10 medium-7 small-centered medium-centered large-centered" >
             <div class="row">
-                <div class="column small-12 medium-4 text-center">
+                <div class="column small-12 large-4 text-center wow rotateInDownLeft slideInRight" data-wow-duration="3s" data-wow-offset="100">
                     <h1> <span class="fa fa-rocket fa-3x"></span></h1>
                     <h2>Responsive</h2>
                     <p>Lorem ipsum dolor sit amet, est oblique quaestio consulatu in, id vim consul mollis disputando, vix no erat audire commune.</p>
                 </div>
-                <div class="column small-12 medium-4 text-center">
+                <div class="column small-12 large-4 text-center wow rotateInDownLeft" data-wow-duration="3s" data-wow-delay="2s" data-wow-offset="100">
                     <h1> <span class="fa fa- fa-sellsy fa-3x"></span></h1>
                     <h2>Responsive</h2>
                     <p>Lorem ipsum dolor sit amet, est oblique quaestio consulatu in, id vim consul mollis disputando, vix no erat audire commune.</p>
                 </div>
-                <div class="column small-12 medium-4 text-center">
+                <div class="column small-12 large-4 text-center wow bounce" data-wow-duration="3s" data-wow-delay="2s"data-wow-offset="100">
                     <h1> <span class="fa fa-unlink fa-3x"></span></h1>
                     <h2>Responsive</h2>
                     <p>Lorem ipsum dolor sit amet, est oblique quaestio consulatu in, id vim consul mollis disputando, vix no erat audire commune.</p>
@@ -92,6 +92,25 @@ Creates a new instance of a sticky thing.
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+
+    <script src="/js/wow.js"></script>
+   <script>
+       wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
 </body>
 
 </html>

@@ -8,18 +8,46 @@
     <title>Foundation for Sites</title>
 
 
-<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
 
     <!--=====Font awesome css-->
     <link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.css">
 
 
-    <link rel="stylesheet" href="css/foundation.css">
+
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="css/foundation.css">
 </head>
 
 <body>
+
+
+
+
+
+    <div data-sticky-container>
+        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
+            <div class="title-bar-left">
+                <h1><a href="">My Site</a></h1>
+
+            </div>
+            <div class="title-bar-right">
+                <ul class="menu">
+                    <li><a href="#"><i class="fi-list"></i> <span>One</span></a></li>
+                    <li><a href="#"><i class="fi-list"></i> <span>Two</span></a></li>
+                    <li><a href="#"><i class="fi-list"></i> <span>Three</span></a></li>
+                    <li><a href="#"><i class="fi-list"></i> <span>Four</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
     <!--=======This can be a landing title!-->
     <div class="startup-hero wow bounceInUp pulse" data-wow-duration="3s" data-wow-offset="100">
         <div class="row">
@@ -32,7 +60,7 @@
     </div>
 
     <div class="wow bounceInLe" data-wow-duration="3s" data-wow-offset="100">
-        <div class="column small-12 large-10 medium-7 small-centered medium-centered large-centered" >
+        <div class="column small-12 large-10 medium-7 small-centered medium-centered large-centered">
             <div class="row">
                 <div class="column small-12 large-4 text-center wow rotateInDownLeft slideInRight" data-wow-duration="3s" data-wow-offset="100">
                     <h1> <span class="fa fa-rocket fa-3x"></span></h1>
@@ -44,7 +72,7 @@
                     <h2>Responsive</h2>
                     <p>Lorem ipsum dolor sit amet, est oblique quaestio consulatu in, id vim consul mollis disputando, vix no erat audire commune.</p>
                 </div>
-                <div class="column small-12 large-4 text-center wow bounce" data-wow-duration="3s" data-wow-delay="2s"data-wow-offset="100">
+                <div class="column small-12 large-4 text-center wow bounce" data-wow-duration="3s" data-wow-delay="2s" data-wow-offset="100">
                     <h1> <span class="fa fa-unlink fa-3x"></span></h1>
                     <h2>Responsive</h2>
                     <p>Lorem ipsum dolor sit amet, est oblique quaestio consulatu in, id vim consul mollis disputando, vix no erat audire commune.</p>
@@ -54,34 +82,35 @@
         </div>
     </div>
 
-<div class=""><div class="text-center">
+    <div class="">
+        <div class="text-center">
 
-    <span class="fa fa-facebook-official"></span>
-    <span class="fa fa-twitter-square"></span>
-    <span class="fa fa-github"></span>
-    <span class="fa fa-linkedin"></span>
+            <span class="fa fa-facebook-official"></span>
+            <span class="fa fa-twitter-square"></span>
+            <span class="fa fa-github"></span>
+            <span class="fa fa-linkedin"></span>
 
+        </div>
     </div>
-    </div>
 
 
-    JavaScript Reference <br>
-Initializing<br>
-The file foundation.sticky.js must be included in your JavaScript to use this plugin, along with<br> foundation.core.js. This plugin also requires these<br> utility libraries:<br>
-
-foundation.util.triggers.js
-foundation.util.mediaQuery.js
-Foundation.Sticky
-Creates a new instance of a sticky thing.
+    JavaScript Reference
+    <br> Initializing
+    <br> The file foundation.sticky.js must be included in your JavaScript to use this plugin, along with
+    <br> foundation.core.js. This plugin also requires these
+    <br> utility libraries:
+    <br> foundation.util.triggers.js foundation.util.mediaQuery.js Foundation.Sticky Creates a new instance of a sticky thing.
 
 
 
     <div data-sticky-container>
-  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
-    <div class="title-bar-left">Copyright @ 2016</div>
-    <div class="title-bar-right">Right<!-- Content --></div>
-  </div>
-</div>
+        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
+            <div class="title-bar-left">Copyright @ 2016</div>
+            <div class="title-bar-right">Right
+                <!-- Content -->
+            </div>
+        </div>
+    </div>
 
 
 
@@ -94,23 +123,21 @@ Creates a new instance of a sticky thing.
     <script src="js/app.js"></script>
 
     <script src="/js/wow.js"></script>
-   <script>
-       wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
-      }
-    );
-    wow.init();
-    document.getElementById('moar').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'section--purple wow fadeInDown';
-      this.parentNode.insertBefore(section, this);
-    };
-  </script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100,
+            callback: function(box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        });
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+            var section = document.createElement('section');
+            section.className = 'section--purple wow fadeInDown';
+            this.parentNode.insertBefore(section, this);
+        };
+    </script>
 </body>
 
 </html>
